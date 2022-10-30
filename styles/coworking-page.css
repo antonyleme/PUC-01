@@ -1,0 +1,40 @@
+.coworking-page-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.coworking-page-grid .coworking-card-name {
+  font-size: 21px;
+  line-height: 1em;
+}
+
+.coworking-page-grid .coworking-card-rate {
+  font-size: 21px;
+}
+
+.coworking-page-grid .coworking-card-rate img {
+  width: 30px;
+  margin-bottom: -7px;
+}
+
+.coworking-page-grid .coworking-card-address {
+  font-size: 18px;
+  margin-bottom: 24px;
+  margin-top: 4px;
+}
+
+.coworking-page-grid .coworking-card-price {
+  font-size: 21px;
+}
+.coworking-page-grid .coworking-card-period {
+  font-size: 16px;
+}
+
+.coworking-page-grid .coworking-card-image {
+  padding-top: 60%;
+  margin-bottom: 10px;
+}
+
+.coworking-page-grid .coworking-card:hover {
+  opacity: 1;
+}
