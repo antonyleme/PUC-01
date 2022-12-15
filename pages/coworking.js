@@ -3,6 +3,8 @@ class CoworkingPage {
     const navbar = new Navbar();
     navbar.render();
 
+    const benefits = new CoworkingBenefits();
+
     const urlParams = new URLSearchParams(window.location.search);
     const id = urlParams.get('id');
 
@@ -11,8 +13,10 @@ class CoworkingPage {
       response.json().then(data => {
         const coworking = data.find(el => el.id === parseInt(id))
 
-        if (coworking)
+        if (coworking) {
           coworkingCards.render('coworking', coworking);
+          benefits.render('coworking-benefits', coworking.benefits)
+        }
       })
     })
   }

@@ -1,18 +1,12 @@
-class Header {
+class Navbar {
   constructor() {
     this.html = `
-      <header class="header">
-        <nav class="header-nav">
-          <img src="../../assets/logo.svg"/>
-          <div class="header-nav-login">
-            <div class="header-nav-login-avatar"></div>
-            <div class="header-nav-login-name">Login</div>
-          </div>
-        </nav>
+      <nav class="header-nav header-nav-solid">
+        <a href='/'>
+          <img src="../../assets/logo-black.svg"/>
+        </a>
 
-        <h1 class="header-title">Descubra lugares <strong>para trabalhar</strong> pelo 🌎</h1>
-
-        <div class="search-bar">
+        <div class="search-bar search-bar-bordered">
           <div class="search-bar-form-group">
             <label>Local</label>
             <input placeholder="Onde?"/>
@@ -37,12 +31,17 @@ class Header {
             Buscar
           </button>
         </div>
-      </header>
+
+        <a href='/profile/index.html' class="header-nav-login">
+          <div class="header-nav-login-avatar"></div>
+          <div class="header-nav-login-name">Login</div>
+        </a>
+      </nav>
     `;
   }
 
   render() {
-    const node = document.getElementById('header-component');
+    const node = document.getElementById('navbar-component');
     node.innerHTML = this.html;
   }
 }
